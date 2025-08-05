@@ -8,3 +8,6 @@ def main : IO Unit :=
     let stdIn ← IO.getStdin
     let userInput ← stdIn.getLine
     IO.println s!"Hello, {userInput}!"
+    IO.println s!"What's the next name?"
+    let userInput ← stdIn.getLine
+    IO.println s!"Hello, {userInput}!"
