@@ -1,4 +1,10 @@
 import Lean4GuessingGame
 
+#check IO.getStdin
+
 def main : IO Unit :=
-  IO.println s!"Hello, {hello}!"
+  do
+    IO.println s!"What's your name?"
+    let stdIn ← IO.getStdin
+    let userInput ← stdIn.getLine
+    IO.println s!"Hello, {userInput}!"
